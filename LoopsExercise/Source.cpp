@@ -42,10 +42,10 @@ int exercise2()
 
 int exercise3()
 {
-	int i = 1, multiple[1000];
+	int i = 0, multiple[1000];
 	int sum = 0;
 
-	for (; i < 1001; i++)
+	for (; i < 1000; i++)
 	{
 		if (i % 3 == 0 && i % 5 != 0)
 		{
@@ -63,7 +63,7 @@ int exercise3()
 
 	i = 1;
 
-	for (; i < 1001; i++)
+	for (; i < 1000; i++)
 	{
 		sum = multiple[i] + sum;
 	}
@@ -109,13 +109,17 @@ int exercise4()
 	}
 	system("pause");
 
-	i = 1;
+	i = 0;
 
 	int multiple[1000];
 	int sum = 0;
 
-	while (i < 1001)
+	while (i < 1000)
 	{
+		if (i % 3 == 0 && i % 5 == 0)
+		{
+			multiple[i] = i;
+		}
 		if (i % 3 == 0 && i % 5 != 0)
 		{
 			multiple[i] = i;
@@ -131,9 +135,9 @@ int exercise4()
 		i++;
 	}
 
-	i = 1;
+	i = 0;
 
-	while (i < 1001)
+	while (i < 1000)
 	{
 		sum = multiple[i] + sum;
 		i++;
